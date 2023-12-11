@@ -13,5 +13,7 @@ async def task_wait_n(n: int, max_delay: int) -> list:
     Use wait random to wait for a random delay
     between 0 and max_delay n times
     """
-    delays = [task_wait_random(max_delay) for _ in range(n)]
+    delays = []
+    for _ in range(n):
+        delays.append(task_wait_random(max_delay))
     return [await delay for delay in asyncio.as_completed(delays)]
