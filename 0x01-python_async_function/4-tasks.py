@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Use task_wati_random to wait on a number n of asyncio tasks
+Use task_wait_random to wait on a number n of asyncio tasks
 """
 
 import asyncio
